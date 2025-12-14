@@ -379,7 +379,7 @@ function openModal(o) {
     : `<button disabled style="opacity:0.5;">Apply / Learn More</button>`;
 
   // Short referral link
-  const shortLink = `https://compus.bettke.space/s.html?id=${o.id}`;
+  const shortLink = `https://up.netlify.app/s.html?id=${o.id}`;
   const refParam = firebase.auth().currentUser ? `?ref=${firebase.auth().currentUser.uid}` : "";
   const fullShareLink = shortLink + refParam;
 
