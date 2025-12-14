@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- SEO Title -->
+  <title>Loading Opportunity… | Compus</title>
+
+  <!-- Encouraging Search Engine Description -->
+  <meta name="description" content="Discover new opportunities that inspire growth, learning, and success. Compus connects you to scholarships, jobs, programs, internships, and life-changing possibilities.">
+
+  <!-- ======== OPEN GRAPH (FACEBOOK, WHATSAPP, LINKEDIN) ======== -->
+  <meta property="og:title" content="A New Opportunity Awaits You | Compus" />
+  <meta property="og:description" content="Unlock your potential with personally recommended opportunities. Scholarships, jobs, internships—your next step starts here." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://compus.bettke.space/share-default.jpg" />
+  <meta property="og:url" content="https://compus.bettke.space/" />
+
+  <!-- ======== TWITTER META TAGS ======== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="A New Opportunity Awaits You | Compus" />
+  <meta name="twitter:description" content="Discover opportunities designed to help you move forward. Scholarships, jobs, and programs tailored for you." />
+  <meta name="twitter:image" content="https://compus.bettke.space/share-default.jpg" />
+
+  <!-- Mobile SEO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    const path = window.location.pathname; // e.g., /s/abc123
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    
+    const id = path.split('/').pop();
+
+    let target = `https://compus.bettke.space/opportunity.html?id=${id}`;
+
+    if (ref) {
+      localStorage.setItem('referrerUid', ref);
+      target += `&ref=${ref}`;
+    }
+    
+    // Redirect after a short delay to allow meta tags to load
+    setTimeout(() => window.location.href = target, 200);
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #f6f9fc;
+      color: #333;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <h2>Redirecting you to the opportunity...</h2>
+  <p>Please wait a moment.</p>
+</body>
+  </html>
